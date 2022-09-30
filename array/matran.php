@@ -23,7 +23,7 @@
         $kq = trim($_POST['kq']);
     else $kq = "";
 
-    
+
     if (isset($_POST['thuchien'])) {
         if ((is_numeric($sodong) && is_numeric($socot))) {
             if ($sodong >= 2 && $sodong <= 5) {
@@ -43,12 +43,11 @@
                             //echo ($arr[$i][$j] . " ");
                             $tmp .= ($arr[$i][$j] . " ");
                         }
-                        
+
                         // $a.="<br/>";
                         $tmp .= "\n";
                     }
                     $kq = "Ma trận được tạo là : \n" . $tmp;
-                    
                 } else echo "Số cột trong khoảng [2-5] !";
             } else echo "Số dòng trong khoảng [2-5] !";
         } else {
@@ -65,21 +64,27 @@
             <tr>
 
             </tr>
-            <tr><b>Ma trận số nguyên</b></tr>
+            <tr><h4>MA TRẬN SỐ NGUYÊN</h4></tr>
             <tr>
                 <td>Số dòng</td>
+
+            </tr>
+            <tr>
                 <td><input type="text" name="sodong" value="<?php if (isset($_POST['sodong'])) echo $_POST['sodong']; ?>"></td>
             </tr>
             <tr>
                 <td>Số cột</td>
+
+            </tr>
+            <tr>
                 <td><input type="text" name="socot" value="<?php if (isset($_POST['socot'])) echo $_POST['socot']; ?>"></td>
             </tr>
             <tr></tr>
             <td>Kết quả</td>
-            <td><textarea name="kq" id="" cols="21" rows="10" readonly="true" style="resize: none;"><?php echo $kq  ?></textarea></td>
+            <tr>
+                <td><textarea name="kq" id="" cols="21" rows="10" readonly="true" style="resize: none;"><?php echo $kq  ?></textarea></td>
             </tr>
             <tr>
-                <td></td>
                 <td><input type="submit" name="thuchien" value="Thực hiện"></td>
             </tr>
         </table>

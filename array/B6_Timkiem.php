@@ -132,7 +132,7 @@ if(isset($_POST['so']) && isset($_POST['tinh'])){
 
         <td>Kết quả tìm kiếm:</td>
 
-        <td><input type="text" name="kq" size= "70" disabled="disabled" value="<?php echo $ketqua;?> "/></td>
+        <td><input type="text" name="kq" size= "70" disabled="disabled"  value="<?php echo $ketqua;?> "/></td>
 
     </tr>
 
