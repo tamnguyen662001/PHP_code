@@ -61,7 +61,7 @@ $_POST["kq"]=$kq;
 <table border='0'>
     <h3>Phép tính với 2 số</h3>
     <tr>
-        <td>Chọn phép tính</td>
+        <td>Phép tính</td>
         <td>
            <?php echo $_POST['ptinh'] ?>
         </td>
