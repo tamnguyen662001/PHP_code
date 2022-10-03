@@ -11,13 +11,49 @@
 <body>
 
 	<?php
+
+	function inMang($arr)
+	{
+		return implode(" ", $arr) . "&#13;&#10;";
+	}
+	// hàm sắp xếp tăng
+	function doivitri(&$a, &$b)
+	{
+		$tmp = $a;
+		$a = $b;
+		$b = $tmp;
+	}
+
+	function sapXep(&$arr)
+	{
+		for ($i = 0; $i < count($arr)-1; $i++) {
+			for ($j = $i+1; $j < count($arr); $j++) { 		# code...
+
+				if ($arr[$i] > $arr[$j]) {
+					doivitri($arr[$i], $arr[$j]);
+				}
+			}
+		}
+	}
+	// hàm kiểm tra kề cuối
+	function ktKeCuoi($arr)
+	{
+		for ($i = 0; $i < count($arr); $i++) {
+			if ($arr[$i] > 100) {
+				$kecuoi = (($arr[$i] / 10) % 10);
+				if ($kecuoi == 0) {
+					return $i;
+				}
+			}
+		}
+	}
 	// hàm tính tổng số âm
-	function tongSoAm($arr){
+	function tongSoAm($arr)
+	{
 		$tong = 0;
-		for ($i=0; $i < count($arr); $i++) { 
-			if($arr[$i] < 0)
-			{
-				$tong+=$arr[$i];
+		for ($i = 0; $i < count($arr); $i++) {
+			if ($arr[$i] < 0) {
+				$tong += $arr[$i];
 			}
 		}
 		return $tong;
@@ -36,7 +72,7 @@
 			$arr[$i] = $x;
 		}
 		//In ra mảng vừa tạo
-		$ketqua = "a. Mảng được tạo là: " .implode(" ", $arr) . "&#13;&#10;";
+		$ketqua = "a. Mảng được tạo là: " . implode(" ", $arr) . "&#13;&#10;";
 		//Tìm và in ra các số dương chẵn trong mảng dùng hàm foreach
 		$count = 0;
 		foreach ($arr as $v) {
@@ -58,7 +94,14 @@
 
 		$ketqua .= $daySo;
 		// tongSoAm($arr);
-		$ketqua.= "\n d. Tổng các số âm trong mảng là : " .tongSoAm($arr);
+		$ketqua .= "\n d. Tổng các số âm trong mảng là : " . tongSoAm($arr);
+		//$y = ktKeCuoi($arr);
+		$ketqua .= "\n e. Phần tử có chữ số kế cuối bằng 0 ở vị trí: " . ktKeCuoi($arr);
+		sapXep($arr);
+		// sort($arr);	
+		$ketqua .= "\n f. Mảng được sắp xếp tăng là: " . implode(" ", $arr) . "&#13;&#10;";
+		// inMang($arr);
+
 	}
 
 	?>
