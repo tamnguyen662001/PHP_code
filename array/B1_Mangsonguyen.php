@@ -11,7 +11,19 @@
 <body>
 
 	<?php
-
+	// hàm tính tổng số âm
+	function tongSoAm($arr){
+		$tong = 0;
+		for ($i=0; $i < count($arr); $i++) { 
+			if($arr[$i] < 0)
+			{
+				$tong+=$arr[$i];
+			}
+		}
+		return $tong;
+		// echo "Tổng các số âm trong mảng là : $tong";
+	}
+	// hàm 
 	if (isset($_POST['n'])) $n = $_POST['n'];
 	else $n = 0;
 
@@ -45,6 +57,8 @@
 
 
 		$ketqua .= $daySo;
+		// tongSoAm($arr);
+		$ketqua.= "\n d. Tổng các số âm trong mảng là : " .tongSoAm($arr);
 	}
 
 	?>
