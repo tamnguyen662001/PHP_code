@@ -82,14 +82,14 @@
         <table border="0" cellpadding="0">
 
             <th colspan="2">
-                <h2>THAY THẾ</h2>
+                <h2>THAY THẾ PHẦN TỬ MẢNG</h2>
             </th>
             <tr>
                 <td>Nhập mảng:</td>
                 <td><input type="text" name="mang" size="70" value="<?php echo $str; ?> " /></td>
             </tr>
             <tr>
-                <td>Nhập giá trị muốn thay thế:</td>
+                <td>Phần tử muốn thay thế:</td>
                 <td><input type="text" name="gtc" size="20" value="<?php if (isset($_POST['gtc'])) echo $_POST['gtc']; ?> " /></td>
             </tr>
             <tr>
