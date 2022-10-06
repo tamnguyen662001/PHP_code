@@ -155,7 +155,7 @@
 
     if (isset($_POST['lcb'])) {
         $lcb = $_POST['lcb'];
-    } else $lcb = 0;
+    } else $lcb = 15000000;
 
 
 
@@ -176,7 +176,7 @@
         $b->setDiachi($_POST['diachi']);
         $b->setGioitinh($_POST['gioitinh']);
         $b->setTrinhdo($_POST['trinhdo']);
-
+        
         $ketqua = $b->hienthi();
        
         if ($_POST['chucvu'] == "gv") {
@@ -243,7 +243,7 @@
                                         <tr>
                                             <td>Lương cơ bản</td>
                             </td>
-                            <td><input type="text" name="lcb" value="<?php echo $lcb ?>"></td>
+                            <td><input type="text" name="lcb" readonly="true" value="<?php echo $lcb ?>"></td>
                         </tr>
                     </table>
                     </fieldset>
