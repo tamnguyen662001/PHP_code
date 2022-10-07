@@ -98,7 +98,7 @@
             return $this->lcb;
         }
         #endregion
-        public function __construct($ten, $gt, $ns, $nvl, $hsl, $sc, $lcb)
+        public function __construct($ten, $gt, $ns, $nvl, $hsl, $sc)
         {
             $this->ten = $ten;
             $this->gt = $gt;
@@ -106,7 +106,7 @@
             $this->nvl = $nvl;
             $this->hsl = $hsl;
             $this->sc = $sc;
-            $this->lcb = $lcb;
+            // $this->lcb = $lcb;
         }
 
         abstract public function tinhLuong();
@@ -186,7 +186,7 @@
         function tinhPhat()
         {
             if ($this->snvang > $this->dmvang) {
-                return ($this->snvang - $this->dmvang) * $this->dgphat;
+                return ($this->snvang) * $this->dgphat;
             }
             return 0;
         }
@@ -251,13 +251,7 @@
         {
             return $this->sc * 120000;
         }
-        function tinhPhat()
-        {
-            if ($this->snvang > $this->dmvang) {
-                return ($this->snvang - $this->dmvang) * $this->dgphat;
-            }
-            return 0;
-        }
+        
         function thucLinh()
         {
             return $this->tinhLuong() + $this->tinhThuong2() + $this->tinhTrocap();
@@ -292,10 +286,13 @@
         $hsl = $_POST['hsluong'];
         $sc = $_POST['socon'];
         // $ssp = $_POST['sosanpham'];
-        $lcb = 5000000;
+        // $lcb = 5000000;
 
         if($pb == "vp"){
-            $nhanvien1 = new NhanVienVanPhong($ten, $gt, $ns, $nvl, $hsl, $sc, $lcb);
+            // $nv = new NhanVienVanPhong();
+            // $nv->__construct();
+            $nhanvien1 = new NhanVienVanPhong($ten, $gt, $ns, $nvl, $hsl, $sc);
+
             $nhanvien1->setSongayvang($_POST['songayvang']);
     
             // $snv = $_POST["snv"];
@@ -317,7 +314,7 @@
             $ssp = $_POST['sosanpham'];
             if (isset($_POST["sosanpham"])) $ssp = $_POST["sosanpham"];
             else $ssp = 0;
-            $nhanvien2 = new NhanVienSanXuat($ten, $gt, $ns, $nvl, $hsl, $sc, $lcb);
+            $nhanvien2 = new NhanVienSanXuat($ten, $gt, $ns, $nvl, $hsl, $sc);
             $nhanvien2->setSosanpham($_POST['sosanpham']);
             // $tienphat = $nhanvien2->tinhPhat();
             $trocap = $nhanvien2->tinhTrocap();
