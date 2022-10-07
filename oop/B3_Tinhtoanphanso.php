@@ -43,28 +43,29 @@
               
              
 
-            if (isset($_POST['pheptoan']) && ($_POST['pheptoan']) == "+") {
+            if (isset($_POST['pheptoan']) && ($_POST['pheptoan']) == "cộng") {
                $giatri = Fractions::add($ps1, $ps2); 
                 $toigian =  Fractions::toString($giatri); // 2
                 $ps  = Fractions::fromString($toigian);
+                // $ketqua = "Phép cộng : ".$ps->toString();
             }
-            if (isset($_POST['pheptoan']) && ($_POST['pheptoan']) == "-") {
+            if (isset($_POST['pheptoan']) && ($_POST['pheptoan']) == "trừ") {
                $giatri = Fractions::subtract($ps1, $ps2); 
                 $toigian =  Fractions::toString($giatri); // 2
                 $ps  = Fractions::fromString($toigian);
             }
-            if (isset($_POST['pheptoan']) && ($_POST['pheptoan']) == "*") {
+            if (isset($_POST['pheptoan']) && ($_POST['pheptoan']) == "nhân") {
                $giatri = Fractions::multiply($ps1, $ps2); 
                 $toigian =  Fractions::toString($giatri); // 2
                 $ps  = Fractions::fromString($toigian);
             }
-            if (isset($_POST['pheptoan']) && ($_POST['pheptoan']) == "/") {
+            if (isset($_POST['pheptoan']) && ($_POST['pheptoan']) == "chia") {
                $giatri = Fractions::divide($ps1, $ps2); 
                 $toigian =  Fractions::toString($giatri); // 2
                 $ps  = Fractions::fromString($toigian);
             }
             
-           $ketqua = $ps->toString();
+           $ketqua = "Phép ". $_POST['pheptoan'] .": ".$ps->toString();
           
         }
     ?>
@@ -122,11 +123,11 @@
                 <td>
                     <fieldset style="width:250px">
                         <legend> Chọn phép toán</legend>
-                        <input type="radio" name="pheptoan" value="+" <?php if (isset($_POST['pheptoan']) && ($_POST['pheptoan']) == "+") echo 'checked="checked"' ?> />Cộng
+                        <input type="radio" name="pheptoan" value="cộng" <?php if (isset($_POST['pheptoan']) && ($_POST['pheptoan']) == "cộng") echo 'checked="checked"' ?> />Cộng
 
-                        <input type="radio" name="pheptoan" value="-" <?php if (isset($_POST['pheptoan']) && ($_POST['pheptoan']) == "-") echo 'checked="checked"' ?> />Trừ
-                        <input type="radio" name="pheptoan" value="*" <?php if (isset($_POST['pheptoan']) && ($_POST['pheptoan']) == "*") echo 'checked="checked"' ?> />Nhân
-                        <input type="radio" name="pheptoan" value="/" <?php if (isset($_POST['pheptoan']) && ($_POST['pheptoan']) == "/") echo 'checked="checked"' ?> />Chia
+                        <input type="radio" name="pheptoan" value="trừ" <?php if (isset($_POST['pheptoan']) && ($_POST['pheptoan']) == "trừ") echo 'checked="checked"' ?> />Trừ
+                        <input type="radio" name="pheptoan" value="nhân" <?php if (isset($_POST['pheptoan']) && ($_POST['pheptoan']) == "nhân") echo 'checked="checked"' ?> />Nhân
+                        <input type="radio" name="pheptoan" value="chia" <?php if (isset($_POST['pheptoan']) && ($_POST['pheptoan']) == "chia") echo 'checked="checked"' ?> />Chia
                     </fieldset>
                 </td>
             </tr>
