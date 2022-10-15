@@ -4,7 +4,8 @@ include 'ps.php';
 $a = new Fraction(1,2);
 $b = new Fraction(1,2);
 // Because the Fraction constructor only accepts a numerator, and denominator, you can use this method to convert a mixed number to a Fraction object 
-// $b = Fractions::fromArray(array(1,2,2)); // là cách viết ngắn gọn của $b1 = new Fractions();$b1->fromArray(array(0,6,5));
+// $b = Fractions::fromArray(array(1,2,2)); 
+// là cách viết ngắn gọn của $b1 = new Fractions();$b1->fromArray(array(0,6,5));
 
 // =================================================
 
