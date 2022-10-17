@@ -25,75 +25,34 @@
     }
     //vị trí của mẩu tin đầu tiên trên mỗi trang
     $offset = ($_GET['page'] - 1) * $rowsPerPage;
-    //lấy $rowsPerPage mẩu tin, bắt đầu từ vị trí $offset
-    // $result = mysqli_query($conn, 'SELECT Ma_sua, ten_sua, Trong_luong,
-    //         Don_gia FROM sua LIMIT ' . $offset . ', ' . $rowsPerPage);
-    // echo "<p align='center'><font face= 'Verdana, Geneva, sans-serif' size='5'> THÔNG TIN SỮA</font></P>";
-
 
     $result = mysqli_query($conn, 'SELECT sua.Ten_sua, hang_sua.Ten_hang_sua, loai_sua.Ten_loai, sua.Trong_luong, sua.Don_gia, sua.hinh FROM sua, hang_sua,loai_sua
     WHERE sua.Ma_loai_sua = loai_sua.Ma_loai_sua and sua.Ma_hang_sua = hang_sua.Ma_hang_sua LIMIT ' . $offset . ', ' . $rowsPerPage);
     echo "<p align='center'><font face= 'Verdana, Geneva, sans-serif' size='5'> THÔNG TIN SỮA</font></P>";
    
-
-    // $result = mysqli_query($conn, $sql);
-    // echo "<p align='center'><font size='5' color='blue'> THÔNG TIN SỮA</font></P>";
-    echo "<table align='center' width='700' border='1' cellpadding='2'  cellspacing='2' style='border-collapse:collapse'>";
-    // echo '<tr>
-
-    //         <th width="100">Ảnh sản phẩm</th>
-    //         <th width="150">Thông tin sản phẩm</th>
-
-    //     </tr>';
-
-    // $bg = "#eee";
+    echo "<table align='center' width='1300' border='1' cellpadding='2'  cellspacing='2' style='border-collapse:collapse' >";
+  
     if (mysqli_num_rows($result) <> 0) {
         $stt = 1;
         $n = 0;
 
-       for ($i=0; $i <6 ; $i++) { 
-        echo " <tr> ";
-        while (($rows = mysqli_fetch_row($result)) && $n < 5) {
+        while (($rows = mysqli_fetch_row($result))) {
             $rows[4] = number_format($rows[4], 0, ',', '.') . " VNĐ";
 
-            echo  "<td> <p > <b>$rows[0]</b> </p>
-                                <p>$rows[2] - $rows[3] gram - $rows[4]</p> 
-                                <img width='100px' src='./anh/$rows[5]' />
-                            </td>";
-
-          
-
-            $n++;
-        }
-       }
-
-        // while (($rows = mysqli_fetch_row($result)) ) {
-        //     $rows[4] = number_format($rows[4], 0, ',', '.') . " VNĐ";
-
-        //     if($n<10){
-        //         echo  "<td> <p > <b>$rows[0]</b> </p>
-        //         <p>$rows[2] - $rows[3] gram - $rows[4]</p> 
-        //         <img width='100px' src='./anh/$rows[5]' />
-        //     </td>";
-        //     $n++;
-            // }else{
-            //     echo " <tr> ";
-            //     echo  "<td> <p > <b>$rows[0]</b> </p>
-            //     <p>$rows[2] - $rows[3] gram - $rows[4]</p> 
-            //     <img width='100px' src='./anh/$rows[5]' />
-            // </td>";
-            // $n--;
-            // "</tr>";
+            if ($n < 10) {
+                echo  "<td width='400px' align='center'>
+                            <p> <b>$rows[0]</b> </p>
+                            <p >$rows[2] - $rows[3] gram - $rows[4]</p> 
+                            <img width='100px' height = '120px' src='./anh/$rows[5]' />
+                        </td>";
+                $n++;
+            }
+            if ($n == 5){
+                echo " <tr> </tr> ";
             }
            
-
-        //  "</tr>";
-
-        //     $n++;
-        // }
-        // "</tr>";
-    // }
-   
+        }
+    }
     echo "</table>";
 
     $re = mysqli_query($conn, 'select * from sua');
