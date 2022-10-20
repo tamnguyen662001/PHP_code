@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Thông tin sữa</title>
+    <title>B5_Thông tin sữa</title>
 </head>
 <body>
 

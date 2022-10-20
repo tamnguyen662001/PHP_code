@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thông tin sữa</title>
+    <title>B6_Thông tin sữa</title>
 </head>
 <body>
     
@@ -38,7 +38,7 @@
 
         while (($rows = mysqli_fetch_row($result))) {
             $rows[4] = number_format($rows[4], 0, ',', '.') . " VNĐ";
-
+          
             if ($n < 10) {
                 echo  "<td width='400px' align='center'>
                             <p> <b>$rows[0]</b> </p>
@@ -50,7 +50,6 @@
             if ($n == 5){
                 echo " <tr> </tr> ";
             }
-           
         }
     }
     echo "</table>";
