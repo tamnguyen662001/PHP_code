@@ -33,7 +33,7 @@ body {
 	height:80px;
 	margin:0 auto;
 	width:751px;
-	width:1005px;
+	width:1006px;
 	background-color: cyan;
 }
 #header h1 {
@@ -57,7 +57,7 @@ body {
 	border-right:1px solid #999;
 	margin:10px auto;
 	/* width:750px; */
-	width:1005px;
+	width:1006px;
 	height:40px;
 	list-style:none;
 }

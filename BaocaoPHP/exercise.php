@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách bài tập</title>
+</head>
+<body>
 <?php $page_title = 'Register'; include('includes/header.html');?>
 
 <ul class="top-level-menu">
@@ -54,3 +63,5 @@
 	</center>
 
 <?php include('includes/footer.html'); ?>
+</body>
+</html>
