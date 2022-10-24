@@ -29,10 +29,12 @@ body {
 
 /* header */
 #header {
-	border-bottom:1px solid #999;
+	/* border-bottom:1px solid #999; */
 	height:80px;
 	margin:0 auto;
 	width:751px;
+	width:1005px;
+	background-color: cyan;
 }
 #header h1 {
 	color:#888;
@@ -53,15 +55,17 @@ body {
 #navigation {
 	background:#fafafa;
 	border-right:1px solid #999;
-	margin:0 auto;
-	width:750px;
+	margin:10px auto;
+	/* width:750px; */
+	width:1005px;
 	height:40px;
 	list-style:none;
 }
 #navigation li {
 	border-left:1px solid #999;
 	float:left;
-	width:149px;
+	/* width:149px; */
+	width:200px;
 	list-style:none;
 }
 #navigation a {
@@ -72,14 +76,22 @@ body {
 	font-weight: 800;
 	font-size: 16px;
 	text-transform: uppercase;
+	transition: linear 0.3s;
+	padding-left: 0px;
+	
 }
 #navigation a:hover {
 	background:#e3e3e3;
 	color:#555;
+	transition: linear 0.3s;
+	padding-left: 18px;
+	/* font-size: 18px; */
+	background:cyan;
 }
 #navigation .active {
 	background:#e3e3e3;
 	color:#777;
+
 }
 
 /* content */
@@ -105,7 +117,9 @@ body {
 	margin:0 auto;
 	padding:10px;
 	text-align:center;
-	width:751px;
+	width:1005px;
+	background-color: cyan;
+	line-height: 50px;
 }
 
 /* Added by Larry Ullman: */
