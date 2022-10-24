@@ -5,7 +5,7 @@
 $page_title = 'View the Current Users';
 include ('includes/header.html'); ?>
 <center>
-		<img src="./images/db.png" width="750px"  alt="">
+		<img src="./images/database.png" width="750px"  alt="">
 	</center>
 
 

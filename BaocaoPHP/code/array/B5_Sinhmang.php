@@ -148,7 +148,7 @@
 
             </tr>
             <tr>
-                    <td align="right"><a href="/BaocaoPHP/index.php">Trở về</a></td>
+                    <td align="right"><a href="/BaocaoPHP/admin_page.phpp">Trở về</a></td>
                 </tr>
 
 

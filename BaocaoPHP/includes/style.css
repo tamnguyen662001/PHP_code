@@ -120,6 +120,9 @@ body {
 	width:1005px;
 	background-color: cyan;
 	line-height: 50px;
+	font-size: 16px;
+	color: #000000;
+	font-weight: 700;
 }
 
 /* Added by Larry Ullman: */

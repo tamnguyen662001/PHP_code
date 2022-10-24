@@ -68,7 +68,7 @@
 
                 <td></td>
                 <td><input type="submit" name="tinh" size="20" value="Tính" /></td>
-                <td><a href="/BaocaoPHP/index.php">Trở về</a></td>
+                <td><a href="/BaocaoPHP/admin_page.php">Trở về</a></td>
             </tr>
         </table>
 

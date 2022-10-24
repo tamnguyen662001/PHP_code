@@ -146,7 +146,7 @@ if(isset($_POST['so']) && isset($_POST['tinh'])){
         
 
     </tr>
-    <td align="right"><a  href="/BaocaoPHP/index.php">Trở về</a></td>
+    <td align="right"><a  href="/BaocaoPHP/admin_page.php">Trở về</a></td>
 
 </table>
 

@@ -51,7 +51,7 @@
             </tr> -->
             <tr>
                 <td ><input type="submit" name="tinh" value="TÍNH" /></td>
-                <td align="right"><a  href="/BaocaoPHP/index.php">Trở về</a></td>
+                <td align="right"><a  href="/BaocaoPHP/admin_page.php">Trở về</a></td>
             </tr>
 
         </table>

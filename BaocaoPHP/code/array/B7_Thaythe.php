@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thay thế phần tử mảng</title>
-    <link rel="stylesheet" href="/BaocaoPHP/includes/style.css">
+   
 </head>
 
 <body>
@@ -77,7 +77,7 @@
         }
     </style>
     <!-- ======================================================== -->
-    <?php include('/../BaocaoPHP/includes/header.html') ?> 
+    <!-- <?php include('/../BaocaoPHP/includes/header.html') ?>  -->
   
    
     <center>
@@ -117,7 +117,7 @@
                 <td colspan="2" align="center"><label>(Các phần tử trong mảng sẽ cách nhau bằng dấu ",")</label></td>
             </tr>
             <td></td>
-            <tr><td align="right"><a  href="/BaocaoPHP/index.php">Trở về</a></td></tr>
+            <tr><td align="right"><a  href="/BaocaoPHP/admin_page.php">Trở về</a></td></tr>
 
         </table>
 

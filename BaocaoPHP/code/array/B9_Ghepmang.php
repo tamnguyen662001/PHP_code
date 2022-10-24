@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ghép mảng</title>
+   
 </head>
 
 <body>
@@ -155,7 +156,7 @@
                     <td colspan="2" align="center"><label>(Các phần tử trong mảng sẽ cách nhau bằng dấu ",")</label></td>
                 </tr>
                 <tr>
-                    <td align="right"><a href="/BaocaoPHP/index.php">Trở về</a></td>
+                    <td align="right"><a href="/BaocaoPHP/admin_page.php">Trở về</a></td>
                 </tr>
 
             </table>
