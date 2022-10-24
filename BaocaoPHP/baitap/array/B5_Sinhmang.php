@@ -100,7 +100,7 @@
     ?>
 
 
-
+<center>
     <form action="" method="post">
 
         <table border="0" cellpadding="0">
@@ -147,13 +147,15 @@
             <td><input type="text" name="sum" size="70" disabled="disabled" value="<?php echo $sum; ?> " /></td>
 
             </tr>
-
+            <tr>
+                    <td align="right"><a href="/BaocaoPHP/index.php">Trở về</a></td>
+                </tr>
 
 
         </table>
 
     </form>
-
+    </center>
 </body>
 
 </html>

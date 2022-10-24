@@ -1,13 +1,4 @@
-<?php # Script 9.5 - register.php #2
-// This script performs an INSERT query to add a record to the users table.
-
-$page_title = 'Register';
-include('includes/header.html');
-
-
-?>
-
-
+<?php $page_title = 'Register'; include('includes/header.html');?>
 
 <ul class="top-level-menu">
     <li><a href="#">Bài tập Mảng</a>
@@ -16,12 +7,15 @@ include('includes/header.html');
             <li><a href="./baitap/array/B7_Thaythe.php">Thay thế phần tử</a></li>
             <li><a href="./baitap/array/B9_Ghepmang.php">Ghép mảng</a></li>
 			<li><a href="./baitap/array/Matran.php">Ma trận số nguyên</a></li>
+			<li><a href="./baitap/array/B4_Tongdayso.php">Tổng dãy số</a></li>
+            <li><a href="./baitap/array/B5_Sinhmang.php">Min max trong mảng</a></li>
         </ul></li>
     <li><a href="#">Bài tập Form</a>
 	<ul class="second-level-menu">
             <li><a href="./baitap/form/tinhtiendien.php">Tính tiền điện</a></li>
             <li><a href="./baitap/form/pheptinh.php">Tính toán 2 số</a></li>
-            <li><a href="#">Seattle</a></li>
+            <li><a href="./baitap/form/dientichhcn.php">Diện tích hình chữ nhật</a></li>
+          
         </ul>
 	</li>
     <li>
@@ -40,7 +34,7 @@ include('includes/header.html');
             <li><a href="#">Tìm kiếm</a>
 			<ul class="third-level-menu">
                     <li><a href="./baitap/mysql/B9_Timkiemsua.php">Tìm kiếm sữa</a></li>
-                    <li><a href="./baitap/mysql/B10_Timkiemnangcao.php">Tìm kiếm sữa nâng cao</a></li>
+                    <li><a href="./baitap/mysql/B10_Timkiemnangcao.php">Tìm kiếm sữa 2</a></li>
                     
                 </ul></li>
 
@@ -50,14 +44,13 @@ include('includes/header.html');
 	<ul class="second-level-menu">
             <li><a href="./baitap/oop/B2_QuanlyNV.php">Quản lí nhân viên</a></li>
             <li><a href="./baitap/oop/B4_Chuvi.php">Tính chu vi</a></li>
-            <li><a href="#">Seattle</a></li>
         </ul>
 	</li>
     <li><a href="#">Contact</a></li>
 </ul>
 
 	<center>
-		<img src="./images/bg.jpg" width="640px"  alt="">
+		<img src="./images/bg.jpg" width="750px"  alt="">
 	</center>
 
 <?php include('includes/footer.html'); ?>

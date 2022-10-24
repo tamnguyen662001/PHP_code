@@ -29,34 +29,37 @@
 
     if (isset($_POST['tinh'])) {
 
-        $str = $_POST['mang'];
+        $str = trim($_POST['mang']);
 
         $arr = explode(",", $str);
 
         $str_kq = implode(",", $arr);
+        $ketqua  = tong($arr);
     }
     ?>
 
 
+<center>
     <form action="" method="post">
 
         <table border="0" cellpadding="0">
 
             <th colspan="2">
-                <h2>TÍNH TỔNG</h2>
+                <h2 style="color:red ;">TÍNH TỔNG DÃY SỐ</h2>
             </th>
 
             <tr>
                 <td>Nhập mảng:</td>
-                <td><input type="text" name="mang" size="70" value="<?php echo $str; ?> " /></td>
+                <td><input type="text" name="mang" size="50" value="<?php echo $str; ?> " /></td>
             </tr>
 
             <tr>
                 <td>Mảng:</td>
-                <td><input type="text" name="mang_kq" size="70" disabled="disabled" value="<?php echo $str_kq; ?> " /></td>
+                <td><input type="text" name="mang_kq" size="50" disabled="disabled" value="<?php echo $str_kq; ?> " /></td>
             </tr>
             <td>Kết quả </td>
-            <td><input type="text" name="kq" size="70" disabled="disabled" value="<?php echo tong($arr); ?> " /></td>
+            <td><input type="text" name="kq" size="10" disabled="disabled" value="<?php echo $ketqua; ?> " /></td>
+            
             </tr>
             <tr>
                 <td colspan="2" align="center"><label>(Các phần tử trong mảng sẽ cách nhau bằng dấu ",")</label></td>
@@ -64,14 +67,13 @@
             <tr>
 
                 <td></td>
-
                 <td><input type="submit" name="tinh" size="20" value="Tính" /></td>
-
+                <td><a href="/BaocaoPHP/index.php">Trở về</a></td>
             </tr>
         </table>
 
     </form>
-
+    </center>
 </body>
 
 </html>

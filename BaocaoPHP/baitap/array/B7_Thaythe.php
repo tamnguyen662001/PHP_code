@@ -112,6 +112,8 @@
             <tr>
                 <td colspan="2" align="center"><label>(Các phần tử trong mảng sẽ cách nhau bằng dấu ",")</label></td>
             </tr>
+            <td></td>
+            <tr><td align="right"><a  href="/BaocaoPHP/index.php">Trở về</a></td></tr>
 
         </table>
 

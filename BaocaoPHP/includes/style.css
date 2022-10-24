@@ -24,7 +24,7 @@ a:hover {
 body {
 	background:#ffffff;
 	color:#555;
-	font:0.8em Arial, Helvetica, "bitstream vera sans", sans-serif;
+	font:0.8em Courier , 	Helvetica, "bitstream vera sans", sans-serif;
 }
 
 /* header */
@@ -69,6 +69,9 @@ body {
 	display:block;
 	line-height:40px;
 	text-align:center;
+	font-weight: 800;
+	font-size: 16px;
+	text-transform: uppercase;
 }
 #navigation a:hover {
 	background:#e3e3e3;
@@ -151,6 +154,7 @@ input, select, .input {
     padding: 0;
     margin: 0;
     display: none;
+	/* font:0.8em Courier , 	Helvetica, "bitstream vera sans", sans-serif */
 }
 
 .second-level-menu > li
@@ -189,7 +193,8 @@ input, select, .input {
 
 .top-level-menu a /* Apply to all links inside the multi-level menu */
 {
-    font: bold 14px Arial, Helvetica, sans-serif;
+    /* font: bold 14px Arial, Helvetica, sans-serif; */
+	font:16px Courier , 	Helvetica, "bitstream vera sans", sans-serif;
     color: #FFFFFF;
     text-decoration: none;
     padding: 0 0 0 10px;
