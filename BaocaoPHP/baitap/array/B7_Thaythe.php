@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thay thế phần tử mảng</title>
+    <link rel="stylesheet" href="/BaocaoPHP/includes/style.css">
 </head>
 
 <body>
@@ -76,6 +77,9 @@
         }
     </style>
     <!-- ======================================================== -->
+    <?php include('/../BaocaoPHP/includes/header.html') ?> 
+  
+   
     <center>
     <form action="" method="post">
 
