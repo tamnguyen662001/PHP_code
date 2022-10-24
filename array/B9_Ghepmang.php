@@ -56,11 +56,11 @@
 
 
      if (isset($_POST['hthi'])) {
-        $strA = $_POST['mangA'];
+        $strA = trim($_POST['mangA']);
         $arrA = explode(",", $strA);
         $countA = demSoPhanTu($arrA);
 
-        $strB = $_POST['mangB'];
+        $strB = trim($_POST['mangB']);
         $arrB = explode(",", $strB);
         $countB = demSoPhanTu($arrB);
 
